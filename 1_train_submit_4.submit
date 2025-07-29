@@ -4,7 +4,7 @@
 #SBATCH --mem=180g
 #SBATCH --time=3:00:00
 #SBATCH --error=block_0103_BLAR_4.%J.err
-#SBATCH --output=block_0103_BLAR_3.%J.out
+#SBATCH --output=block_0103_BLAR_4.%J.out
 #SBATCH --cpus-per-task=1
 
 module purge
