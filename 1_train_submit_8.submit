@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH --job-name=block_0103_BLAR_8
+#SBATCH --job-name=block_0104_BLAR_8
 #SBATCH --ntasks=20
 #SBATCH --mem=180g
 #SBATCH --time=3:00:00
-#SBATCH --error=block_0103_BLAR_8.%J.err
-#SBATCH --output=block_0103_BLAR_8.%J.out
+#SBATCH --error=block_0104_BLAR_8.%J.err
+#SBATCH --output=block_0104_BLAR_8.%J.out
 #SBATCH --cpus-per-task=1
 
 module purge
