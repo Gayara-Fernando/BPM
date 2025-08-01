@@ -304,17 +304,17 @@ def fit_Bayes_TS_model(csv_file, forecasting_steps, path_to_preprocessed_dfs, su
 
 # csv_file_name = 'extracted_features_sub_window_1.csv'
 forecasting_steps = 7
-path_to_precessed_dfs = 'data/BLAR_ready_dfs/model_1/block_0205/'
+path_to_precessed_dfs = 'data/BLAR_ready_dfs/model_1/block_0206/'
 # sub_image_number = 0
 n_features = 33
 nchains = 4
-figure_folder_path = 'data/BLAR_implementation/Block_0205/figures'
-forecasts_folder_path = 'data/BLAR_implementation/Block_0205/forecasted_counts'
+figure_folder_path = 'data/BLAR_implementation/Block_0206/figures'
+forecasts_folder_path = 'data/BLAR_implementation/Block_0206/forecasted_counts'
 # fig, ax = plt.subplots(1, 1, figsize=(10, 5))
 # fig_ax = (fig, ax)
 
 # let's limit the dfs to 10 for now
-sub_image_files = ['block_0205_df_' + str(i) +'.csv' for i in range(800, 910)]
+sub_image_files = ['block_0206_df_' + str(i) +'.csv' for i in range(800, 910)]
 sub_image_numbers = np.arange(800, 910)
 
 def run_model(i):
