@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH --job-name=block_0106_BLAR_4
+#SBATCH --job-name=block_0201_BLAR_4
 #SBATCH --ntasks=20
 #SBATCH --mem=180g
 #SBATCH --time=3:00:00
-#SBATCH --error=block_0106_BLAR_4.%J.err
-#SBATCH --output=block_0106_BLAR_4.%J.out
+#SBATCH --error=block_0201_BLAR_4.%J.err
+#SBATCH --output=block_0201_BLAR_4.%J.out
 #SBATCH --cpus-per-task=1
 #SBATCH --partition=stats-gaann
 
