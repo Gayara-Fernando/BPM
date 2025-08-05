@@ -12,4 +12,4 @@ module purge
 module load anaconda
 conda activate $NRDSTOR/tfp_cpu_env
 
-python 1_Train_BLAR_trial_python.py 
+python 1_Train_BLAR_trial_python_0.py 
