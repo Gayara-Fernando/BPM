@@ -50,10 +50,10 @@ def batch_predict(model, generator, flatten=True, verbose=False):
     for batch_features, batch_labels in generator:
         # Get model predictions for the batch
         batch_predictions = model.predict(batch_features, batch_size=generator.batch_size, verbose=0)
-        pred = batch_predictions.flatten()
-        y = batch_labels.flatten()
-        predictions.extend(pred)
-        true_values.extend(y)
+        # pred = batch_predictions.flatten()
+        # y = batch_labels.flatten()
+        predictions.extend(batch_predictions)
+        true_values.extend(batch_labels)
         # print("Batch Predict:")
     print(f"Predictions: {len(predictions)}")
     print(f"True: {len(true_values)}")
