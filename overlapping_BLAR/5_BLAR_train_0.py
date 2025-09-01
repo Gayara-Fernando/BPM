@@ -304,7 +304,7 @@ def fit_Bayes_TS_model(csv_file, forecasting_steps, path_to_preprocessed_dfs, su
 
 # csv_file_name = 'extracted_features_sub_window_1.csv'
 forecasting_steps = 7
-path_to_precessed_dfs = 'data/BLAR_ready_dfs/model_1/block_0103/'
+path_to_precessed_dfs = 'data/BLAR_ready_dfs/block_0103/'
 # sub_image_number = 0
 n_features = 33
 nchains = 4
