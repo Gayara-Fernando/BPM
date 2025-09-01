@@ -304,7 +304,7 @@ def fit_Bayes_TS_model(csv_file, forecasting_steps, path_to_preprocessed_dfs, su
 
 # csv_file_name = 'extracted_features_sub_window_1.csv'
 forecasting_steps = 7
-path_to_precessed_dfs = 'data/BLAR_ready_dfs/model_1/block_0306/'
+path_to_precessed_dfs = 'data/BLAR_ready_dfs/model_1/block_0103/'
 # sub_image_number = 0
 n_features = 33
 nchains = 4
@@ -314,8 +314,8 @@ forecasts_folder_path = 'data/BLAR_implementation/Block_0306/forecasted_counts'
 # fig_ax = (fig, ax)
 
 # let's limit the dfs to 10 for now
-sub_image_files = ['block_0306_df_' + str(i) +'.csv' for i in range(100)]
-sub_image_numbers = np.arange(100)
+sub_image_files = ['block_0103_df_' + str(i) +'.csv' for i in range(150)]
+sub_image_numbers = np.arange(150)
 
 def run_model(i):
     return fit_Bayes_TS_model(
@@ -325,4 +325,4 @@ def run_model(i):
     )
 
 with concurrent.futures.ProcessPoolExecutor(max_workers=20) as executor:
-    all_dfs = list(tqdm(executor.map(run_model, range(100)), total = 100))
+    all_dfs = list(tqdm(executor.map(run_model, range(150)), total = 150))
