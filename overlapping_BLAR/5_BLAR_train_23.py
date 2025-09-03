@@ -314,8 +314,8 @@ forecasts_folder_path = 'data/BLAR_implementation/Block_0103/forecasted_counts'
 # fig_ax = (fig, ax)
 
 # let's limit the dfs to 10 for now
-sub_image_files = ['block_0103_df_' + str(i) +'.csv' for i in range(100)]
-sub_image_numbers = np.arange(100)
+sub_image_files = ['block_0103_df_' + str(i) +'.csv' for i in range(2300, 2400)]
+sub_image_numbers = np.arange(2300, 2400)
 
 def run_model(i):
     return fit_Bayes_TS_model(

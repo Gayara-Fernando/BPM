@@ -314,8 +314,8 @@ forecasts_folder_path = 'data/BLAR_implementation/Block_0103/forecasted_counts'
 # fig_ax = (fig, ax)
 
 # let's limit the dfs to 10 for now
-sub_image_files = ['block_0103_df_' + str(i) +'.csv' for i in range(100)]
-sub_image_numbers = np.arange(100)
+sub_image_files = ['block_0103_df_' + str(i) +'.csv' for i in range(3000, 3072)]
+sub_image_numbers = np.arange(3000, 3072)
 
 def run_model(i):
     return fit_Bayes_TS_model(
@@ -325,4 +325,4 @@ def run_model(i):
     )
 
 with concurrent.futures.ProcessPoolExecutor(max_workers=20) as executor:
-    all_dfs = list(tqdm(executor.map(run_model, range(100)), total = 100))
+    all_dfs = list(tqdm(executor.map(run_model, range(72)), total = 72))
