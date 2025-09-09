@@ -207,8 +207,8 @@ for file in read_images:
 
 im_height = all_images[0].shape[0]
 im_width = all_images[0].shape[1]
-stride = 16
-kernel_size = 100
+stride = 24
+kernel_size = 300
 n_channels = 3
 catch_subwindows_all = []
 
@@ -280,8 +280,8 @@ def create_and_stack_subwindows(im_height, im_width, stride, kernel_size, n_chan
 
 im_height = all_images[0].shape[0]
 im_width = all_images[0].shape[1]
-stride = 16
-kernel_size = 100
+stride = 24
+kernel_size = 300
 n_channels = 3
 stack_block_0101 = create_and_stack_subwindows(im_height, im_width, stride, kernel_size, n_channels, all_images)
 
@@ -458,10 +458,10 @@ train_stack.shape
 
 
 # sanity check
-print(np.mean(stack_block_0101 == train_stack[:3072, :, :, :, :]))
-print(np.mean(stack_block_0102 == train_stack[3072:3072*2, :, :, :, :]))
-print(np.mean(stack_block_0203 == train_stack[3072*2:3072*3, :, :, :, :]))
-print(np.mean(stack_block_0301 == train_stack[3072*3:3072*4, :, :, :, :]))
+print(np.mean(stack_block_0101 == train_stack[:1376, :, :, :, :]))
+print(np.mean(stack_block_0102 == train_stack[1376:1376*2, :, :, :, :]))
+print(np.mean(stack_block_0203 == train_stack[1376*2:1376*3, :, :, :, :]))
+print(np.mean(stack_block_0301 == train_stack[1376*3:1376*4, :, :, :, :]))
 
 
 # In[ ]:
