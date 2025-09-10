@@ -1,0 +1,97 @@
+Model: "model_2"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_1 (InputLayer)        [(None, 13, None, None, 3)   0         []                            
+                             ]                                                                    
+                                                                                                  
+ time_distributed (TimeDist  (None, 13, 32)               71808     ['input_1[0][0]']             
+ ributed)                                                                                         
+                                                                                                  
+ lstm (LSTM)                 [(None, 64),                 24832     ['time_distributed[0][0]']    
+                              (None, 64),                                                         
+                              (None, 64)]                                                         
+                                                                                                  
+ repeat_vector (RepeatVecto  (None, 7, 64)                0         ['lstm[0][0]']                
+ r)                                                                                               
+                                                                                                  
+ lstm_1 (LSTM)               (None, 7, 64)                33024     ['repeat_vector[0][0]',       
+                                                                     'lstm[0][1]',                
+                                                                     'lstm[0][2]']                
+                                                                                                  
+ time_distributed_1 (TimeDi  (None, 7, 32)                2080      ['lstm_1[0][0]']              
+ stributed)                                                                                       
+                                                                                                  
+==================================================================================================
+Total params: 131744 (514.62 KB)
+Trainable params: 103104 (402.75 KB)
+Non-trainable params: 28640 (111.88 KB)
+__________________________________________________________________________________________________
+['test_data_blk_0103.npy', 'test_data_blk_0104.npy', 'test_data_blk_0105.npy', 'test_data_blk_0106.npy', 'test_data_blk_0201.npy', 'test_data_blk_0202.npy', 'test_data_blk_0205.npy', 'test_data_blk_0206.npy', 'test_data_blk_0302.npy', 'test_data_blk_0303.npy', 'test_data_blk_0304.npy', 'test_data_blk_0305.npy', 'test_data_blk_0306.npy']
+(1376, 13, 300, 300, 3)
+['test_targets_blk_0103.npy', 'test_targets_blk_0104.npy', 'test_targets_blk_0105.npy', 'test_targets_blk_0106.npy', 'test_targets_blk_0201.npy', 'test_targets_blk_0202.npy', 'test_targets_blk_0205.npy', 'test_targets_blk_0206.npy', 'test_targets_blk_0302.npy', 'test_targets_blk_0303.npy', 'test_targets_blk_0304.npy', 'test_targets_blk_0305.npy', 'test_targets_blk_0306.npy']
+(1376, 13, 300, 300, 3)
+Predictions: 1376
+True: 1376
+1.0
+(1376, 7, 32)
+(1376, 13, 300, 300, 3)
+Predictions: 1376
+True: 1376
+1.0
+(1376, 7, 32)
+(1376, 13, 300, 300, 3)
+Predictions: 1376
+True: 1376
+1.0
+(1376, 7, 32)
+(1376, 13, 300, 300, 3)
+Predictions: 1376
+True: 1376
+1.0
+(1376, 7, 32)
+(1376, 13, 300, 300, 3)
+Predictions: 1376
+True: 1376
+1.0
+(1376, 7, 32)
+(1376, 13, 300, 300, 3)
+Predictions: 1376
+True: 1376
+1.0
+(1376, 7, 32)
+(1376, 13, 300, 300, 3)
+Predictions: 1376
+True: 1376
+1.0
+(1376, 7, 32)
+(1376, 13, 300, 300, 3)
+Predictions: 1376
+True: 1376
+1.0
+(1376, 7, 32)
+(1376, 13, 300, 300, 3)
+Predictions: 1376
+True: 1376
+1.0
+(1376, 7, 32)
+(1376, 13, 300, 300, 3)
+Predictions: 1376
+True: 1376
+1.0
+(1376, 7, 32)
+(1376, 13, 300, 300, 3)
+Predictions: 1376
+True: 1376
+1.0
+(1376, 7, 32)
+(1376, 13, 300, 300, 3)
+Predictions: 1376
+True: 1376
+1.0
+(1376, 7, 32)
+(1376, 13, 300, 300, 3)
+Predictions: 1376
+True: 1376
+1.0
+(1376, 7, 32)
