@@ -1,0 +1,76 @@
+Model: "model_2"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_1 (InputLayer)        [(None, 13, None, None, 3)   0         []                            
+                             ]                                                                    
+                                                                                                  
+ time_distributed (TimeDist  (None, 13, 32)               71808     ['input_1[0][0]']             
+ ributed)                                                                                         
+                                                                                                  
+ lstm (LSTM)                 [(None, 64),                 24832     ['time_distributed[0][0]']    
+                              (None, 64),                                                         
+                              (None, 64)]                                                         
+                                                                                                  
+ repeat_vector (RepeatVecto  (None, 7, 64)                0         ['lstm[0][0]']                
+ r)                                                                                               
+                                                                                                  
+ lstm_1 (LSTM)               (None, 7, 64)                33024     ['repeat_vector[0][0]',       
+                                                                     'lstm[0][1]',                
+                                                                     'lstm[0][2]']                
+                                                                                                  
+ time_distributed_1 (TimeDi  (None, 7, 32)                2080      ['lstm_1[0][0]']              
+ stributed)                                                                                       
+                                                                                                  
+==================================================================================================
+Total params: 131744 (514.62 KB)
+Trainable params: 103104 (402.75 KB)
+Non-trainable params: 28640 (111.88 KB)
+__________________________________________________________________________________________________
+['test_data_blk_0103.npy', 'test_data_blk_0104.npy', 'test_data_blk_0105.npy', 'test_data_blk_0106.npy', 'test_data_blk_0201.npy', 'test_data_blk_0202.npy', 'test_data_blk_0205.npy', 'test_data_blk_0206.npy', 'test_data_blk_0302.npy', 'test_data_blk_0303.npy', 'test_data_blk_0304.npy', 'test_data_blk_0305.npy', 'test_data_blk_0306.npy']
+['test_targets_blk_0103.npy', 'test_targets_blk_0104.npy', 'test_targets_blk_0105.npy', 'test_targets_blk_0106.npy', 'test_targets_blk_0201.npy', 'test_targets_blk_0202.npy', 'test_targets_blk_0205.npy', 'test_targets_blk_0206.npy', 'test_targets_blk_0302.npy', 'test_targets_blk_0303.npy', 'test_targets_blk_0304.npy', 'test_targets_blk_0305.npy', 'test_targets_blk_0306.npy']
+(1376, 13, 300, 300, 3)
+(1376, 7, 32)
+Predictions: 1376
+True: 1376
+1.0
+Predictions: 1376
+True: 1376
+1.0
+Predictions: 1376
+True: 1376
+1.0
+Predictions: 1376
+True: 1376
+1.0
+Predictions: 1376
+True: 1376
+1.0
+Predictions: 1376
+True: 1376
+1.0
+Predictions: 1376
+True: 1376
+1.0
+Predictions: 1376
+True: 1376
+1.0
+Predictions: 1376
+True: 1376
+1.0
+Predictions: 1376
+True: 1376
+1.0
+Predictions: 1376
+True: 1376
+1.0
+Predictions: 1376
+True: 1376
+1.0
+Predictions: 1376
+True: 1376
+1.0
+[0.17533217, 0.23609103, 0.21037218, 0.3625513, 0.2505377, 0.21710435, 0.31989786, 0.2598944, 0.24620484, 0.18630157, 0.27230155, 0.23903991, 0.2801545]
+[0.0799763, 0.10019591, 0.091919884, 0.15306653, 0.104773566, 0.09367679, 0.1352798, 0.10592542, 0.10312943, 0.083012685, 0.11266549, 0.09416144, 0.10947578]
+[0.7134236126879876, 0.7181828807919899, 0.7838202257975616, 0.6607729323869034, 0.7216841007033867, 0.7160780464622521, 0.7196579216054435, 0.7538746068967659, 0.7468112843072083, 0.6738061242071062, 0.6674628685857802, 0.7199688435055708, 0.7254370064421263]
+[0.8677920175294624, 0.8486453424781991, 0.8991088733059399, 0.8931368240018142, 0.8540009110007514, 0.8464353520332859, 0.8868578975579997, 0.8979677855885991, 0.8777636695308352, 0.8602684495003182, 0.8172725759414083, 0.8570204583899543, 0.8660716744931778]
