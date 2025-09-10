@@ -75,7 +75,7 @@ def get_prioirs_and_x_beta(X_pred, n_pred):
         name='beta'))
     x_beta = tf.einsum('ij,...j->...i', X_pred, beta)
 
-    noise_sigma = yield root(tfd.HalfNormal(scale=0.1, name='noise_sigma'))
+    noise_sigma = yield root(tfd.HalfNormal(scale=1, name='noise_sigma'))
 
     intercept_data = X_pred[:,0]
 
@@ -93,7 +93,7 @@ def generate_model_ar_latent(preds_data, n_pred, training=True):
         # define the latent AR component as before
         # Latent AR(1)
         # define the two priors for the parameters of the AR(1) process
-        ar_sigma = yield root(tfd.HalfNormal(0.1, name='ar_sigma'))
+        ar_sigma = yield root(tfd.HalfNormal(1, name='ar_sigma'))
         rho = yield root(tfd.Uniform(0, 1., name='rho'))
 
         # define the AR function below
