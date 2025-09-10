@@ -33,7 +33,7 @@ for i in range(len(input_contents)):
     # load targets
     test_targets = np.load(os.path.join(out_targets_loc, out_contents[i]))
     # print shape of the loaded file
-    print(load_np_file.shape)
+    print(test_features.shape)
     # predicted_values
     # define the test data generator here
     test_data_gen = DataGenerator(test_features, test_targets, batch_size, shuffle=False)
