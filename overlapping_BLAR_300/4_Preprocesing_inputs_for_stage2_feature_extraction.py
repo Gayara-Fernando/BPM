@@ -25,7 +25,7 @@ out_contents = os.listdir(out_targets_loc)
 out_contents.sort()
 
 print(out_contents)
-
+batch_size = 32
 for_sanity_check = []
 for i in range(len(input_contents)):
     # load the np file
