@@ -70,7 +70,7 @@ def plot_tassel_count_data(train_data, test_data, df_no, fig, ax):
 
 def get_prioirs_and_x_beta(X_pred, n_pred):
     beta = yield root(tfd.Sample(
-        tfd.Normal(0., 1.),
+        tfd.Normal(0., 0.1),
         sample_shape=n_pred,
         name='beta'))
     x_beta = tf.einsum('ij,...j->...i', X_pred, beta)
@@ -93,8 +93,8 @@ def generate_model_ar_latent(preds_data, n_pred, training=True):
         # define the latent AR component as before
         # Latent AR(1)
         # define the two priors for the parameters of the AR(1) process
-        ar_sigma = yield root(tfd.HalfNormal(1, name='ar_sigma'))
-        rho = yield root(tfd.Uniform(0, 1., name='rho'))
+        ar_sigma = yield root(tfd.HalfNormal(0.1, name='ar_sigma'))
+        rho = yield root(tfd.Uniform(0.3,1.0, name='rho'))
 
         # define the AR function below
         def ar_fun(y):
